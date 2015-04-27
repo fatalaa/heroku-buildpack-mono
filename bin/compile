@@ -58,6 +58,7 @@ cp -r ${LP_DIR}/.config ${BUILD_DIR}/.
 
 NUGET_EXECUTABLE_PATH=${CACHE_DIR}/nuget.exe
 if [ ! -f ${NUGET_EXECUTABLE_PATH} ]; then
+  echo "fetching NuGet...."
   curl -LSso ${NUGET_EXECUTABLE_PATH} http://nuget.org/nuget.exe
 fi
 
